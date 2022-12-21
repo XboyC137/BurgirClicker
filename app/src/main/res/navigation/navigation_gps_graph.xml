@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/naviguation_gps_graph"
+    app:startDestination="@id/clickingFragment">
+
+    <fragment
+        android:id="@+id/clickingFragment"
+        android:name="com.burgir.burgirclicker.ClickingFragment"
+        android:label="ClickingFragment" >
+        <action
+            android:id="@+id/action_clickingFragment_to_careerFragment"
+            app:destination="@id/careerFragment" />
+        <action
+            android:id="@+id/action_clickingFragment_to_storeFragment"
+            app:destination="@id/storeFragment" />
+        <action
+            android:id="@+id/action_clickingFragment_to_optionsFragment"
+            app:destination="@id/optionsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/careerFragment"
+        android:name="com.burgir.burgirclicker.CareerFragment"
+        android:label="fragment_career"
+        tools:layout="@layout/fragment_career" >
+        <action
+            android:id="@+id/action_careerFragment_to_clickingFragment"
+            app:destination="@id/clickingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="com.burgir.burgirclicker.StoreFragment"
+        android:label="fragment_store"
+        tools:layout="@layout/fragment_store" >
+        <action
+            android:id="@+id/action_storeFragment_to_clickingFragment"
+            app:destination="@id/clickingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/optionsFragment"
+        android:name="com.burgir.burgirclicker.OptionsFragment"
+        android:label="fragment_options"
+        tools:layout="@layout/fragment_options" >
+        <action
+            android:id="@+id/action_optionsFragment_to_clickingFragment"
+            app:destination="@id/clickingFragment" />
+    </fragment>
+</navigation>
